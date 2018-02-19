@@ -14,11 +14,11 @@ class MetadataTableSeeder extends Seeder
         // Barcelona
         DB::table('metadata')->insert([
             'city_id' => 1,
-            'cost' => 828 + 1087,
-            'girls' => 8,
-            'clubs' => 8,
-            'bars' => 7,
-            'logistics' => 9
+            'cost' => 828 + 1087
+//            'girls' => 8,
+//            'clubs' => 8,
+//            'bars' => 7,
+//            'logistics' => 9
         ]);
 
         // Moscow
@@ -73,6 +73,42 @@ class MetadataTableSeeder extends Seeder
         DB::table('metadata')->insert([
             'city_id' => 8,
             'cost' => 632 + 591,
+        ]);
+
+        // Sao Paulo
+        DB::table('metadata')->insert([
+            'city_id' => 9,
+            'cost' => 632 + 599,
+        ]);
+
+        // Bogota
+        DB::table('metadata')->insert([
+            'city_id' => 10,
+            'cost' => 465 + 421,
+        ]);
+
+        // Buenos Aires
+        DB::table('metadata')->insert([
+            'city_id' => 11,
+            'cost' => 632 + 444,
+        ]);
+
+        // Lima
+        DB::table('metadata')->insert([
+            'city_id' => 12,
+            'cost' => 502 + 517,
+        ]);
+
+        // Tokio
+        DB::table('metadata')->insert([
+            'city_id' => 13,
+            'cost' => 1138 + 1110,
+        ]);
+
+        // Bangkok
+        DB::table('metadata')->insert([
+            'city_id' => 14,
+            'cost' => 661 + 677,
         ]);
     }
 }

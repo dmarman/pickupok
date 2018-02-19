@@ -18,5 +18,10 @@ class City extends Model
             'cost' => '#'
         ]);
     }
+
+    public function ratings()
+    {
+        return $this->hasMany('App\Rating');
+    }
     
 }

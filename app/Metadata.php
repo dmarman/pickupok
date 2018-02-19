@@ -14,6 +14,10 @@ class Metadata extends Model
         'city_id'
     ];
 
+    public function city(){
+        return $this->belongsTo('App\City');
+    }
+
     public function getScoreAttribute($value)
     {
         if($value === NULL || $value === '#'){

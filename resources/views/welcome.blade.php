@@ -12,6 +12,7 @@
                             <th>Cost</th>
                             <th>Weather</th>
                             <th class="fixed-width">Obesity</th>
+                            <th class="fixed-width">Breast</th>
                             <th class="fixed-width">Girls</th>
                             <th class="fixed-width">Clubs</th>
                             <th class="fixed-width">Bars</th>
@@ -29,16 +30,19 @@
                                     <progress class="progress is-primary @invertColor($city->country->bmi)" value="{{ $city->country->bmi }}" max="100"></progress>
                                 </td>
                                 <td>
+                                    <progress class="progress is-primary @color(20*$city->country->breast)" value="{{ $city->country->breast }}" max="5"></progress>
+                                </td>
+                                <td>
                                     <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="girls" class="progress modal-editable @color(10*$city->metadata->girls)" value="{{ $city->metadata->girls }}" max="10"></progress>
                                 </td>
                                 <td>
-                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="clubs" class="progress modal-editable @color(10*$city->metadata->girls)" value="{{ $city->metadata->clubs }}" max="10"></progress>
+                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="clubs" class="progress modal-editable @color(10*$city->metadata->clubs)" value="{{ $city->metadata->clubs }}" max="10"></progress>
                                 </td>
                                 <td>
-                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="bars" class="progress modal-editable @color(10*$city->metadata->girls)" value="{{ $city->metadata->bars }}" max="10"></progress>
+                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="bars" class="progress modal-editable @color(10*$city->metadata->bars)" value="{{ $city->metadata->bars }}" max="10"></progress>
                                 </td>
                                 <td>
-                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="logistics" class="progress modal-editable @color(10*$city->metadata->girls)" value="{{ $city->metadata->logistics }}" max="10"></progress>
+                                    <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="logistics" class="progress modal-editable @color(10*$city->metadata->logistics)" value="{{ $city->metadata->logistics }}" max="10"></progress>
                                 </td>
                             </tr>
                         @endforeach
@@ -47,6 +51,8 @@
             </div>
         </div>
     </div>
+
+    <a class="teleport-widget-link" href="https://teleport.org/cities/bali/">Life quality score - Bali</a><script async class="teleport-widget-script" data-url="https://teleport.org/cities/bali/widget/scores/?currency=USD" data-max-width="770" data-height="958" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>
 
     <div class="modal">
         <div class="modal-background"></div>

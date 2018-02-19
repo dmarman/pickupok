@@ -61,22 +61,12 @@ class CityTableSeeder extends Seeder
 
         DB::table('cities')->insert([
             'country_id' => 14,
-            'name' => 'Sao Paolo'
-        ]);
-
-        DB::table('cities')->insert([
-            'country_id' => 2,
-            'name' => 'Las Vegas'
+            'name' => 'Sao Paulo'
         ]);
 
         DB::table('cities')->insert([
             'country_id' => 11,
             'name' => 'Bogota'
-        ]);
-
-        DB::table('cities')->insert([
-            'country_id' => 11,
-            'name' => 'Medellin'
         ]);
 
         DB::table('cities')->insert([
@@ -87,11 +77,6 @@ class CityTableSeeder extends Seeder
         DB::table('cities')->insert([
             'country_id' => 15,
             'name' => 'Lima'
-        ]);
-
-        DB::table('cities')->insert([
-            'country_id' => 11,
-            'name' => 'Medellin'
         ]);
 
         DB::table('cities')->insert([

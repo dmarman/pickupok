@@ -31,36 +31,38 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $ratings = Rating::all();
-        $cities = [];
+        $cities = City::with('country', 'metadata', 'ratings.city')->get();
 
-        foreach ($ratings as $rating) {
-            if (!array_key_exists($rating->city_id, $cities)) {
-                $cities[$rating->city_id] = [$rating->metadata => [$rating->value]];
-            } else {
-                if(!array_key_exists($rating->metadata, $cities[$rating->city_id])){
-                    $cities[$rating->city_id][$rating->metadata] = [$rating->value];
-                } else {
-                    array_push($cities[$rating->city_id][$rating->metadata], $rating->value);
-                }
-            }
-        };
-
-        foreach ($cities as $cityId => $parameters){
+        foreach ($cities as $city){
             $scores = [];
-            $metadata = Metadata::firstOrCreate(['city_id' => $cityId]);
 
-            foreach ($parameters as $parameter => $value){
-                $metadata[$parameter] = array_sum($value)/count($value);
-                array_push($scores, $metadata[$parameter]);
+            // Calculate metadata from ratings
+            foreach ($city->ratings as $rating) {
+                // TODO change $rating->metadata for $rating->parameter
+                if (!array_key_exists($rating->metadata, $scores)) {
+                    $scores[$rating->metadata] = [$rating->value];
+                } else {
+                    array_push($scores[$rating->metadata], $rating->value);
+                }
+            };
+
+            // Retrieve $metadata from the city
+            $metadata = Metadata::with('city.country')->firstOrCreate(['city_id' => $city->id]);
+
+            // Calculate score
+            $score = NULL;
+            foreach ($scores as $key => $value){
+                $metadata[$key] = array_sum($scores[$key])/count($scores[$key]);
+                $score += $metadata[$key];
             }
+            $score = 10 + ($score + 2*$city->country->breast - 0.365*$city->country->bmi - 0.006*$city->metadata->cost)/(count($scores) + 3);
 
-            $metadata->score = 10*array_sum($scores)/count($scores);
-
+            // Save final score in DB
+            $metadata->score = $score;
             $metadata->save();
         }
 
-        $cities = City::with('country', 'metadata')->get();
+        $cities = City::with('country', 'metadata', 'ratings.city')->get();
 
         $cities = $cities->sortByDesc('metadata.score');
 
