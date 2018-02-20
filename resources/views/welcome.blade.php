@@ -52,8 +52,6 @@
         </div>
     </div>
 
-    <a class="teleport-widget-link" href="https://teleport.org/cities/bali/">Life quality score - Bali</a><script async class="teleport-widget-script" data-url="https://teleport.org/cities/bali/widget/scores/?currency=USD" data-max-width="770" data-height="958" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>
-
     <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content has-text-centered">

@@ -51,7 +51,7 @@ class CityTableSeeder extends Seeder
 
         DB::table('cities')->insert([
             'country_id' => 2,
-            'name' => 'New York City',
+            'name' => 'New York',
             'cost' => 1158 + 3118
         ]);
 
