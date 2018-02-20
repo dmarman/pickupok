@@ -41,6 +41,8 @@ class RatingController extends Controller
         $rating->metadata = $request->metadata;
         $rating->value = $request->value;
         $rating->save();
+
+        return $rating;
     }
 
     /**

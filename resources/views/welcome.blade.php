@@ -24,7 +24,7 @@
                             <tr>
                                 <td>{{ $city->metadata->score }}</td>
                                 <td><strong>{{ $city->name }}</strong><br><img class="flag" src="http://www.countryflags.io/{{ $city->country->code }}/flat/16.png"><small> {{ $city->country->name }}</small></td>
-                                <td>${{ $city->metadata->cost }}/m</td>
+                                <td>${{ $city->cost }}/m</td>
                                 <td>Good</td>
                                 <td>
                                     <progress class="progress is-primary @invertColor($city->country->bmi)" value="{{ $city->country->bmi }}" max="100"></progress>

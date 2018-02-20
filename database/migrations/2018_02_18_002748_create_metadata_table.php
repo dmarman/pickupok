@@ -17,12 +17,10 @@ class CreateMetadataTable extends Migration
             $table->increments('id');
             $table->integer('city_id');
             $table->float('score')->nullable();
-            $table->float('cost')->nullable();
             $table->float('girls')->nullable();
             $table->float('clubs')->nullable();
             $table->float('bars')->nullable();
             $table->float('logistics')->nullable();
-            $table->float('weather')->nullable();
             $table->timestamps();
         });
     }

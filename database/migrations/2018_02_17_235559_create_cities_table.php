@@ -17,8 +17,22 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->integer('country_id');
             $table->string('name');
+            $table->float('cost')->nullable();
+            $table->float('weather')->nullable();
             $table->double('longitude')->nullable();
             $table->double('latitude')->nullable();
+            $table->float('housing')->nullable();
+            $table->float('cost_of_living')->nullable();
+            $table->float('travel_connectivity')->nullable();
+            $table->float('commute')->nullable();
+            $table->float('safety')->nullable();
+            $table->float('business_freedom')->nullable();
+            $table->float('healthcare')->nullable();
+            $table->float('education')->nullable();
+            $table->float('economy')->nullable();
+            $table->float('environment_quality')->nullable();
+            $table->float('taxation')->nullable();
+            $table->float('internet_access')->nullable();            
             $table->timestamps();
         });
     }
