@@ -74,6 +74,7 @@
                         <button class="button is-primary modal-change-button">Submit</button>
                     </p>
                 </div>
+                <p>Ratings will be </p>
             </div>
 
         </div>

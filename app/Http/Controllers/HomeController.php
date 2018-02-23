@@ -55,7 +55,7 @@ class HomeController extends Controller
                 $metadata[$key] = array_sum($scores[$key])/count($scores[$key]);
                 $score += $metadata[$key];
             }
-            $score = 10 + ($score + 2*$city->country->breast - 0.365*$city->country->bmi - 0.006*$city->cost)/(count($scores) + 3);
+            $score = 10 + ($score + 2*$city->country->breast - 0.365*$city->country->bmi - 0.006*$city->cost + $city->healthcare + $city->safety)/(count($scores) + 5);
 
             // Save final score in DB
             $metadata->score = $score;
