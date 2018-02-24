@@ -80,11 +80,9 @@ class GetTeleportData extends Command
         $res = $client->get('https://api.teleport.org/api/urban_areas/slug:' . $city . '/scores/');
         if($res->getStatusCode() == 200) {
             $data = json_decode($res->getBody(), true);
-
         } else {
             $this->info('Cannot reach API');
         }
-//            sleep(2);
 
         return $data;
     }

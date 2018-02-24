@@ -32,7 +32,9 @@ class CreateCitiesTable extends Migration
             $table->float('economy')->nullable();
             $table->float('environment_quality')->nullable();
             $table->float('taxation')->nullable();
-            $table->float('internet_access')->nullable();            
+            $table->float('internet_access')->nullable();
+            $table->string('image_web')->nullable();
+            $table->string('image_mobile')->nullable();
             $table->timestamps();
         });
     }
