@@ -19,6 +19,7 @@ class CreateVenuesTable extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('description')->nullable();
+            $table->string('link')->nullable();
             $table->float('score')->nullable();
             $table->float('latitude')->nullable();
             $table->float('longitude')->nullable();

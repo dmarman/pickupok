@@ -16,9 +16,11 @@ class DatabaseSeeder extends Seeder
 //            CityTableSeeder::class,
             MetadataTableSeeder::class,
             RatingsTableSeeder::class,
-            CitiesTableSeeder::class,
+//            CitiesTableSeeder::class,
             VenueTableSeeder::class
         ]);
         $this->call(CitiesTableSeeder::class);
+        $this->call(CountriesTableSeeder::class);
+        $this->call(VenuesTableSeeder::class);
     }
 }

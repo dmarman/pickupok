@@ -45,16 +45,18 @@ class getTeleportImages extends Command
         $cities = City::all();
 
         foreach ($cities as $city){
-            $this->error($city->name);
-            $data = $this->getImages($city->name);
-            $this->info(json_encode($data['photos'][0]['image']));
-            
-            $city->image_mobile = $data['photos'][0]['image']['mobile'];
-            $city->image_web = $data['photos'][0]['image']['web'];
+            if($city->image_web == NULL){
+                $this->error($city->name);
+                $data = $this->getImages($city->name);
+                $this->info(json_encode($data['photos'][0]['image']));
 
-            $city->save();
+                $city->image_mobile = $data['photos'][0]['image']['mobile'];
+                $city->image_web = $data['photos'][0]['image']['web'];
 
-            sleep(1);
+                $city->save();
+
+                sleep(1);
+            }
         }
     }
 
