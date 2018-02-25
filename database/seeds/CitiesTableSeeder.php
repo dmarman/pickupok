@@ -14,9 +14,9 @@ class CitiesTableSeeder extends Seeder
     {
         
 
-        \DB::table('cities')->delete();
+        \DB::table('Cities')->delete();
         
-        \DB::table('cities')->insert(array (
+        \DB::table('Cities')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -38,8 +38,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 3.88,
                 'taxation' => 3.7800000000000002,
                 'internet_access' => 5.9399999999999995,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/barcelona_web-8ce54f1421.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/barcelona-aacdf7ba91.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:45',
+                'updated_at' => '2018-02-25 21:10:56',
             ),
             1 => 
             array (
@@ -62,8 +64,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 5.45,
                 'taxation' => 5.97,
                 'internet_access' => 7.84,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/moscow_web-3b49a7d2d1.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/moscow-99ccf7ba84.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:46',
+                'updated_at' => '2018-02-25 21:10:57',
             ),
             2 => 
             array (
@@ -86,8 +90,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 5.22,
                 'taxation' => 5.0,
                 'internet_access' => 8.42,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/wroclaw_web-f8ee8c2037.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/wroclaw-1e6f2fb3b9.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:47',
+                'updated_at' => '2018-02-25 21:10:59',
             ),
             3 => 
             array (
@@ -110,8 +116,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 5.95,
                 'taxation' => 1.73,
                 'internet_access' => 9.52,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/medellin_web-d40fa1b2b9.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/medellin-8559818a33.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:48',
+                'updated_at' => '2018-02-25 21:11:00',
             ),
             4 => 
             array (
@@ -134,8 +142,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 5.77,
                 'taxation' => 4.68,
                 'internet_access' => 5.48,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/las-vegas_web-7dc177ab7c.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/las-vegas-6acb21a1fe.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:50',
+                'updated_at' => '2018-02-25 21:11:02',
             ),
             5 => 
             array (
@@ -158,8 +168,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 5.35,
                 'taxation' => 3.8,
                 'internet_access' => 2.34,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/new-york_web-99d9bb0809.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/new-york-9cb6cc2ae5.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:51',
+                'updated_at' => '2018-02-25 21:11:03',
             ),
             6 => 
             array (
@@ -182,8 +194,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 6.55,
                 'taxation' => 4.38,
                 'internet_access' => 2.82,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area_web-f17b1f60e6.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area-7f6d130d20.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:52',
+                'updated_at' => '2018-02-25 21:11:04',
             ),
             7 => 
             array (
@@ -206,8 +220,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 3.4699999999999998,
                 'taxation' => 2.76,
                 'internet_access' => 7.02,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/rio-de-janeiro_web-600ed3659c.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/rio-de-janeiro-448ecb9d55.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:53',
+                'updated_at' => '2018-02-25 21:11:06',
             ),
             8 => 
             array (
@@ -230,8 +246,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 2.37,
                 'taxation' => 2.77,
                 'internet_access' => 7.11,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/sao-paulo_web-843ef93d03.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/sao-paulo-94ecdb90e1.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:54',
+                'updated_at' => '2018-02-25 21:11:07',
             ),
             9 => 
             array (
@@ -254,8 +272,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 4.21,
                 'taxation' => 1.73,
                 'internet_access' => 9.21,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota-8dc7193397.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:55',
+                'updated_at' => '2018-02-25 21:11:08',
             ),
             10 => 
             array (
@@ -278,8 +298,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 4.6,
                 'taxation' => 1.44,
                 'internet_access' => 7.08,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/buenos-aires_web-17f0020100.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/buenos-aires-bb7fb05d6b.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:57',
+                'updated_at' => '2018-02-25 21:11:10',
             ),
             11 => 
             array (
@@ -302,8 +324,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 2.86,
                 'taxation' => 6.46,
                 'internet_access' => 8.43,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/lima_web-d5641b4390.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/lima-0c69e4ed56.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:58',
+                'updated_at' => '2018-02-25 21:11:11',
             ),
             12 => 
             array (
@@ -326,8 +350,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 6.08,
                 'taxation' => 5.99,
                 'internet_access' => 3.23,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/tokyo_web-7a20b5733f.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/tokyo-5d21b97864.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:31:59',
+                'updated_at' => '2018-02-25 21:11:12',
             ),
             13 => 
             array (
@@ -350,8 +376,10 @@ class CitiesTableSeeder extends Seeder
                 'environment_quality' => 3.51,
                 'taxation' => 6.73,
                 'internet_access' => 7.22,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/bangkok_web-24b795d6ac.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/bangkok-abfa69e431.jpg',
                 'created_at' => NULL,
-                'updated_at' => '2018-02-20 21:32:00',
+                'updated_at' => '2018-02-25 21:11:14',
             ),
         ));
         

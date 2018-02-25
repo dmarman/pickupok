@@ -18,3 +18,5 @@ Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 Route::get('/', 'HomeController@welcome')->name('home');
 
 Route::post('/rating', 'RatingController@store');
+
+Route::get('/{countryName}/{cityName}', 'CityController@show');

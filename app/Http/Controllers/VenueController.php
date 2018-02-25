@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
+use App\Venue;
 use Illuminate\Http\Request;
 
-class CityController extends Controller
+class VenueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return 'hello';
+        //
     }
 
     /**
@@ -41,23 +41,21 @@ class CityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function show($countryName, $cityName)
+    public function show(Venue $venue)
     {
-        $city = City::with('metadata', 'country', 'venues')->where('name', $cityName)->first();
-
-        return view('city', compact('city'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function edit(City $city)
+    public function edit(Venue $venue)
     {
         //
     }
@@ -66,10 +64,10 @@ class CityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\City  $city
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, City $city)
+    public function update(Request $request, Venue $venue)
     {
         //
     }
@@ -77,10 +75,10 @@ class CityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\City  $city
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function destroy(City $city)
+    public function destroy(Venue $venue)
     {
         //
     }

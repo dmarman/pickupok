@@ -19242,16 +19242,3 @@ input[type=range].slider.is-danger .has-output-tooltip + output {
   color: #fff;
 }
 
-.table td,
-.table th {
-  vertical-align: inherit;
-}
-
-.table .progress {
-  cursor: pointer;
-}
-
-.fixed-width {
-  width: 8vw;
-}
-

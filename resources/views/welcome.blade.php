@@ -22,12 +22,32 @@
                     <tbody>
                         @foreach($cities as $city)
                             <tr>
-                                <td>{{ $city->metadata->score }}</td>
-                                <td><strong>{{ $city->name }}</strong><br><img class="flag" src="http://www.countryflags.io/{{ $city->country->code }}/flat/16.png"><small> {{ $city->country->name }}</small></td>
+                                <td><strong>{{ $city->metadata->score }}</strong></td>
+                                <td>
+                                    <a href="./{{ $city->country->name }}/{{ $city->name }}">
+                                        <div class="media">
+                                            <figure class="media-left">
+                                                <p class="image  crop">
+                                                    <img src="{{ $city->image_mobile }}" alt="{{ $city->name }}">
+                                                </p>
+                                            </figure>
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <p>
+                                                        <strong>{{ $city->name }}</strong>
+                                                        <br>
+                                                        <img class="flag" src="http://www.countryflags.io/{{ $city->country->code }}/flat/16.png">
+                                                        {{ $city->country->name }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
                                 <td>${{ $city->cost }}/m</td>
                                 <td>Good</td>
                                 <td>
-                                    <progress class="progress is-primary @invertColor($city->country->bmi)" value="{{ $city->country->bmi }}" max="100"></progress>
+                                    <progress class="progress is-primary @invertColor(10*$city->country->bmi)" value="{{ $city->country->bmi }}" max="10">5</progress>
                                 </td>
                                 <td>
                                     <progress class="progress is-primary @color(20*$city->country->breast)" value="{{ $city->country->breast }}" max="5"></progress>
@@ -84,6 +104,46 @@
         .flag {
             margin-bottom: -3px;
         }
+
+        .crop {
+            width: 70px;
+            height: 54px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .crop img {
+            margin: -11px 0 0 0;
+            width: 100%
+        }
+
+        .fixed-width {
+            width: 6vw;
+        }
+
+        .modal-editable {
+            cursor: pointer;
+        }
+
+        .table td, .table th {
+            vertical-align: inherit;
+        }
+
+        progress {
+            text-align: center;
+        }
+
+        progress:after {
+            content: attr(value);
+            color: #4c4c4c;
+            position: absolute;
+            text-align: center;
+            margin-top: -16px;
+            margin-left: -5px;
+            font-size: 13px;
+        }
+
     </style>
 
     <script>

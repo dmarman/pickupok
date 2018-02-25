@@ -8,6 +8,6 @@ class Country extends Model
 {
     public function getBmiAttribute($value)
     {
-        return round($value);
+        return round(10*$value/40);
     }
 }
