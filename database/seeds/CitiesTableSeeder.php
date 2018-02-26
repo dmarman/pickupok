@@ -771,6 +771,32 @@ class CitiesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2018-02-25 22:33:01',
             ),
+            29 => 
+            array (
+                'id' => 30,
+                'country_id' => 22,
+                'name' => 'Ho Chi Minh City',
+                'cost' => 999.0,
+                'weather' => NULL,
+                'longitude' => NULL,
+                'latitude' => NULL,
+                'housing' => 8.45,
+                'cost_of_living' => 8.93,
+                'travel_connectivity' => 2.08,
+                'commute' => 5.16,
+                'safety' => 6.78,
+                'business_freedom' => 4.1,
+                'healthcare' => 5.63,
+                'education' => 4.12,
+                'economy' => 4.83,
+                'environment_quality' => 1.52,
+                'taxation' => 4.92,
+                'internet_access' => 8.93,
+                'image_web' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/ho-chi-minh-city_web-307eb3d218.jpg',
+                'image_mobile' => 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/ho-chi-minh-city-e615342546.jpg',
+                'created_at' => NULL,
+                'updated_at' => '2018-02-26 21:42:00',
+            ),
         ));
         
         

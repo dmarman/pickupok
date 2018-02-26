@@ -69,3 +69,10 @@ class HomeController extends Controller
         return view('welcome', compact('cities'));
     }
 }
+
+// TODO add local dating apps
+// Ratings for type of game, dancing game, dinner game, day game, night game, etc
+// Best Places, avoid places
+// Expat girls
+// Girl traits
+// https://www.rooshvforum.com/thread-13604-page-9.html?highlight=datasheet
