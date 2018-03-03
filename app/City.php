@@ -21,7 +21,7 @@ class City extends Model
     
     public function venues()
     {
-        return $this->hasMany('App\Venue');
+        return $this->hasMany('App\Venue')->where('approved', 1);
     }
 
     public function ratings()

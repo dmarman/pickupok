@@ -6,7 +6,7 @@ use App\Venue;
 use App\VenueRating;
 use Illuminate\Http\Request;
 
-class VenueController extends Controller
+class VenueRatingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,30 +36,38 @@ class VenueController extends Controller
      */
     public function store(Request $request)
     {
-        $venue = new Venue;
-        $venue->city_id = $request->city_id;
-        $venue->type = $request->venue_type;
-        $venue->name = $request->venue_name;
-        $venue->link = $request->venue_website;
-        $venue->score = $request->venue_rating;
-        $venue->save();
-
+        $venueId = $request->venue_id;
         $venueRating = new VenueRating;
-        $venueRating->venue_id = $venue->id;
+        $venueRating->venue_id = $venueId;
         $venueRating->user_id = 1;
-        $venueRating->value = $venue->score;
+        $venueRating->value = $request->value;
         $venueRating->save();
 
-        return 'ok';
+        $venueRatings = VenueRating::where('venue_id', $venueId)->get();
+
+        $totalScore = 0;
+
+        foreach ($venueRatings as $rating){
+            $totalScore += $rating->value;
+        }
+
+        $score = $totalScore/count($venueRatings);
+
+        $venue = Venue::find($venueId);
+
+        $venue->score = $score;
+        $venue->save();
+
+        return $venueRating;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\VenueRating  $venueRating
      * @return \Illuminate\Http\Response
      */
-    public function show(Venue $venue)
+    public function show(VenueRating $venueRating)
     {
         //
     }
@@ -67,10 +75,10 @@ class VenueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\VenueRating  $venueRating
      * @return \Illuminate\Http\Response
      */
-    public function edit(Venue $venue)
+    public function edit(VenueRating $venueRating)
     {
         //
     }
@@ -79,10 +87,10 @@ class VenueController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Venue  $venue
+     * @param  \App\VenueRating  $venueRating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Venue $venue)
+    public function update(Request $request, VenueRating $venueRating)
     {
         //
     }
@@ -90,10 +98,10 @@ class VenueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\VenueRating  $venueRating
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Venue $venue)
+    public function destroy(VenueRating $venueRating)
     {
         //
     }

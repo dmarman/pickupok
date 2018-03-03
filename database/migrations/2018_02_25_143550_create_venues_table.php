@@ -23,6 +23,7 @@ class CreateVenuesTable extends Migration
             $table->float('score')->nullable();
             $table->float('latitude')->nullable();
             $table->float('longitude')->nullable();
+            $table->boolean('approved')->default(false);
             $table->timestamps();
         });
     }

@@ -19,4 +19,8 @@ Route::get('/', 'HomeController@welcome')->name('home');
 
 Route::post('/rating', 'RatingController@store');
 
+Route::post('/venue', 'VenueController@store');
+
+Route::post('/venue/rating', 'VenueRatingController@store');
+
 Route::get('/{countryName}/{cityName}', 'CityController@show');
