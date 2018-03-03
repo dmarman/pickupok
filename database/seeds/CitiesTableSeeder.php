@@ -14,9 +14,9 @@ class CitiesTableSeeder extends Seeder
     {
         
 
-        \DB::table('Cities')->delete();
+        \DB::table('cities')->delete();
         
-        \DB::table('Cities')->insert(array (
+        \DB::table('cities')->insert(array (
             0 => 
             array (
                 'id' => 1,
