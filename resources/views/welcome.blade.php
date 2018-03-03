@@ -10,7 +10,7 @@
                             <th>Score</th>
                             <th>City</th>
                             <th>Cost</th>
-                            <th>Weather</th>
+                            {{--<th>Weather</th>--}}
                             <th class="fixed-width">Obesity</th>
                             <th class="fixed-width">Breast</th>
                             <th class="fixed-width">Girls</th>
@@ -45,7 +45,7 @@
                                     </a>
                                 </td>
                                 <td>${{ $city->cost }}/m</td>
-                                <td>Good</td>
+                                {{--<td>Good</td>--}}
                                 <td>
                                     <progress class="progress is-primary @invertColor(10*$city->country->bmi)" value="{{ $city->country->bmi }}" max="10">5</progress>
                                 </td>
