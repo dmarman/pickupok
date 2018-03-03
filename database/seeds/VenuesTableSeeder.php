@@ -14,9 +14,9 @@ class VenuesTableSeeder extends Seeder
     {
         
 
-        \DB::table('Venues')->delete();
+        \DB::table('venues')->delete();
         
-        \DB::table('Venues')->insert(array (
+        \DB::table('venues')->insert(array (
             0 => 
             array (
                 'id' => 1,
