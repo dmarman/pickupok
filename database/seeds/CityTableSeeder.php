@@ -9,6 +9,9 @@ class CityTableSeeder extends Seeder
      *
      * @return void
      */
+
+    // https://api.teleport.org/api/urban_areas/slug:barcelona/details/
+    
     public function run()
     {
         DB::table('cities')->insert([

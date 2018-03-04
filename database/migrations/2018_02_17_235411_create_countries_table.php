@@ -19,6 +19,7 @@ class CreateCountriesTable extends Migration
             $table->string('code')->nullable();
             $table->float('bmi')->nullable();
             $table->float('breast')->nullable();
+            $table->float('butt')->nullable();
             $table->timestamps();
         });
     }

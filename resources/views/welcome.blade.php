@@ -11,9 +11,10 @@
                             <th>City</th>
                             <th>Cost</th>
                             {{--<th>Weather</th>--}}
-                            <th class="fixed-width">Obesity</th>
-                            <th class="fixed-width">Breast</th>
                             <th class="fixed-width">Girls</th>
+                            <th class="fixed-width">Breast</th>
+                            <th class="fixed-width">Butt</th>
+                            <th class="fixed-width">Thin</th>
                             <th class="fixed-width">Clubs</th>
                             <th class="fixed-width">Bars</th>
                             <th class="fixed-width">Logistics</th>
@@ -47,13 +48,16 @@
                                 <td>${{ $city->cost }}/m</td>
                                 {{--<td>Good</td>--}}
                                 <td>
-                                    <progress class="progress is-primary @invertColor(10*$city->country->bmi)" value="{{ $city->country->bmi }}" max="10">5</progress>
-                                </td>
-                                <td>
-                                    <progress class="progress is-primary @color(20*$city->country->breast)" value="{{ $city->country->breast }}" max="5"></progress>
-                                </td>
-                                <td>
                                     <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="girls" class="progress modal-editable @color(10*$city->metadata->girls)" value="{{ $city->metadata->girls }}" max="10"></progress>
+                                </td>
+                                <td>
+                                    <progress class="progress is-primary @color(20*$city->country->breast)" value="{{ 2*$city->country->breast }}" max="10"></progress>
+                                </td>
+                                <td>
+                                    <progress class="progress is-primary @color(20*$city->country->butt)" value="{{ 2*$city->country->butt }}" max="10"></progress>
+                                </td>
+                                <td>
+                                    <progress class="progress is-primary @color(10*$city->country->bmi)" value="{{ $city->country->bmi }}" max="10"></progress>
                                 </td>
                                 <td>
                                     <progress data-city-name="{{ $city->name }}" data-city-id="{{ $city->id }}" data-parameter="clubs" class="progress modal-editable @color(10*$city->metadata->clubs)" value="{{ $city->metadata->clubs }}" max="10"></progress>
