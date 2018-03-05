@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMetadataTable extends Migration
+class CreateGameRatingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateMetadataTable extends Migration
      */
     public function up()
     {
-        Schema::create('metadata', function (Blueprint $table) {
+        Schema::create('game_ratings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('city_id');
-            $table->float('score')->nullable();
-            $table->float('girls')->nullable();
-            $table->float('clubs')->nullable();
-            $table->float('bars')->nullable();
-            $table->float('logistics')->nullable();
+            $table->integer('game_id');
+            $table->integer('user_id')->nullable();
+            $table->string('parameter');
+            $table->integer('value');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateMetadataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('metadata');
+        Schema::dropIfExists('game_ratings');
     }
 }

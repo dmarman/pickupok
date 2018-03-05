@@ -17,6 +17,7 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->integer('country_id');
             $table->string('name');
+            $table->float('score')->nullable();
             $table->float('cost')->nullable();
             $table->float('weather')->nullable();
             $table->double('longitude')->nullable();

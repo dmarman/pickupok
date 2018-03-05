@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Metadata;
+use App\GirlRating;
 use Illuminate\Http\Request;
 
-class MetadataController extends Controller
+class GirlRatingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MetadataController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Metadata  $metadata
+     * @param  \App\GirlRating  $girlRating
      * @return \Illuminate\Http\Response
      */
-    public function show(Metadata $metadata)
+    public function show(GirlRating $girlRating)
     {
         //
     }
@@ -52,10 +52,10 @@ class MetadataController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Metadata  $metadata
+     * @param  \App\GirlRating  $girlRating
      * @return \Illuminate\Http\Response
      */
-    public function edit(Metadata $metadata)
+    public function edit(GirlRating $girlRating)
     {
         //
     }
@@ -64,10 +64,10 @@ class MetadataController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Metadata  $metadata
+     * @param  \App\GirlRating  $girlRating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Metadata $metadata)
+    public function update(Request $request, GirlRating $girlRating)
     {
         //
     }
@@ -75,10 +75,10 @@ class MetadataController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Metadata  $metadata
+     * @param  \App\GirlRating  $girlRating
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Metadata $metadata)
+    public function destroy(GirlRating $girlRating)
     {
         //
     }
